@@ -1,0 +1,63 @@
+<template>
+	<div class="header-nav" v-if="!isHide">
+    <div class="container clearfix">
+      <ul class="nav-list">
+        <li v-for='(item, index) in list' :key='index' :class='{"active": item.link == $route.path}'>
+          <router-link :to='item.link'>{{item.name}}</router-link>
+        </li>
+      </ul>
+      <button class="nav-btn" @click="openDialog()">现在购买</button>
+    </div>
+	</div>
+</template>
+
+<script>
+
+export default {
+  props: ['isHide'],
+  data() {
+    return {
+      isOpenDialog: false,
+      list: [
+        {
+          name: '核心技术',
+          link: '/tech'
+        },
+        {
+          name: '产品规格',
+          link: '/spec'
+        }
+      ]
+    }
+  },
+  computed: {
+  },
+  created () {
+  },
+  methods: {
+    closeDialog (status) {
+      this.isOpenDialog = status;
+    },
+    openDialog () {
+      this.isOpenDialog = true;
+      // window.location.href = 'https://z.jd.com/project/details/102089.html?from=jr_search&type=0';
+    },
+    checkoutOrder (arrGoods) {
+      let oOrder = {};
+      let orderId = (new Date()).getTime();
+
+      oOrder = {
+        id: orderId,
+        g: arrGoods
+      }
+
+      sessionStorage.setItem('gs', encodeURIComponent(JSON.stringify(oOrder)));
+      this.$router.push(`/checkout/${orderId}`);
+    }
+  },
+  components: {
+  }
+}
+</script>
+
+<style lang="sass"></style>

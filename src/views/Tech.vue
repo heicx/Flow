@@ -1,0 +1,113 @@
+<template>
+    <ul class="tech-wrap">
+        <li class="tech-img-1"></li>
+        <li class="tech-img-2"></li>
+        <li class="tech-img-3"></li>
+        <li class="tech-img-4"></li>
+        <li class="tech-img-5"></li>
+        <li class="tech-img-6"></li>
+        <li class="tech-img-7"></li>
+        <li class="tech-img-8"></li>
+        <li class="tech-img-9"></li>
+    </ul>
+</template>
+
+<script>
+export default {
+    methods: {},
+    components: {
+    },
+    mounted() {
+    },
+    destroyed() {
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.tech-wrap {
+    background: #fff;
+}
+
+.tech-img-1 {
+    width: 100%;
+    height: 1220px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-1.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-1.jpg) 1x,url(~images/tech-img-1@2x.jpg) 2x);
+}
+.tech-img-2 {
+    width: 100%;
+    height: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-2.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-2.jpg) 1x,url(~images/tech-img-2@2x.jpg) 2x);
+}
+.tech-img-3 {
+    width: 100%;
+    height: 721px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-3.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-3.jpg) 1x,url(~images/tech-img-3@2x.jpg) 2x);
+}
+.tech-img-4 {
+    width: 100%;
+    height: 1439px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-4.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-4.jpg) 1x,url(~images/tech-img-4@2x.jpg) 2x);
+}
+.tech-img-5 {
+    width: 100%;
+    height: 721px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-5.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-5.jpg) 1x,url(~images/tech-img-5@2x.jpg) 2x);
+}
+.tech-img-6 {
+    width: 100%;
+    height: 1248px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-6.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-6.jpg) 1x,url(~images/tech-img-6@2x.jpg) 2x);
+}
+.tech-img-7 {
+    width: 100%;
+    height: 1154px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-7.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-7.jpg) 1x,url(~images/tech-img-7@2x.jpg) 2x);
+}
+.tech-img-8 {
+    width: 100%;
+    height: 2233px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-8.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-8.jpg) 1x,url(~images/tech-img-8@2x.jpg) 2x);
+}
+.tech-img-9 {
+    width: 100%;
+    height: 721px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(~images/tech-img-9.jpg);
+    background-image: -webkit-image-set(url(~images/tech-img-9.jpg) 1x,url(~images/tech-img-9@2x.jpg) 2x);
+}
+</style>

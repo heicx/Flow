@@ -1,0 +1,66 @@
+<template>
+    <div class="health-effect-wrap">
+        <div class="effect-banner"></div>
+        <div class="effect-img-1"></div>
+        <div class="effect-img-2"></div>
+        <div class="effect-img-3"></div>
+    </div>
+</template>
+
+<script>
+export default {
+    methods: {},
+    components: {
+    },
+    mounted() {
+    },
+    destroyed() {
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.health-effect-wrap {
+    background: #fff;
+}
+
+.effect-banner {
+    width: 100%;
+    height: 588px;
+    background-image: url(~images/health-banner.png);
+    background-image: -webkit-image-set(url(~images/health-banner.png) 1x,url(~images/health-banner@2x.png) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.effect-img-1 {
+    width: 100%;
+    height: 849px;
+    background-image: url(~images/health-img-2.jpg);
+    background-image: -webkit-image-set(url(~images/health-img-2.jpg) 1x,url(~images/health-img-2@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.effect-img-2 {
+    width: 100%;
+    height: 1100px;
+    background-image: url(~images/health-img-3.jpg);
+    background-image: -webkit-image-set(url(~images/health-img-3.jpg) 1x,url(~images/health-img-3@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.effect-img-3 {
+    width: 100%;
+    height: 849px;
+    background-image: url(~images/health-img-4.jpg);
+    background-image: -webkit-image-set(url(~images/health-img-4.jpg) 1x,url(~images/health-img-4@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+</style>
