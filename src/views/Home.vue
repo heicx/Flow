@@ -1,10 +1,10 @@
 <template>
     <section class="home-wrap">
         <div class="banner-img-1">
-            <video muted="muted" src="http://static.flowclub.com/Flow-F.mp4" loop="loop" autoplay="autoplay"></video>
+            <!-- <video muted="muted" src="http://static.flowclub.com/Flow-F.mp4" loop="loop" autoplay="autoplay"></video>
             <div class="text-container">
                 <span class="text"></span>
-            </div>
+            </div> -->
         </div>
         <div class="banner-img-2">
             <div class="img"></div>
@@ -113,8 +113,17 @@ export default {
 }
 
 .banner-img-1 {
-    height: 788px;
+    // height: 788px;
+    // overflow: hidden;
+    /** 首屏 Banner 替换 Video **/
+    height: 900px;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-image: url(~images/home-banner.jpg);
+    background-image: -webkit-image-set(url(~images/home-banner.jpg) 1x,url(~images/home-banner@2x.jpg) 2x);
+    /** 首屏 Banner 替换 Video **/
     video {
         position: absolute;
         height: 1080px;
@@ -214,9 +223,14 @@ export default {
     width: 1300px;
     margin: 0 auto;
     li {
+        transition: all .95s ease-out;
+        opacity: 0.8;
         position: relative;
         padding-bottom: 40px;
         padding-top: 40px;
+    }
+    li:hover {
+        opacity: 1;
     }
     .slogan {
         width: 1300px;
