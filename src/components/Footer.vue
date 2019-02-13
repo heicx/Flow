@@ -7,7 +7,7 @@
 				<a class="share-icons weibo" :class="{ active: shareLinkName == 'weibo'}" @mouseover="mouseover('weibo', $event)" @mouseout="mouseout('weibo')" target="_blank" href="https://weibo.com/u/6875249519">
 				</a>
 			</div>
-			<div class="footer-qrcode" v-show="shareLinkName == 'wechat'"></div>
+			<div class="footer-qrcode" :class="{'footer-qrcode-anim': shareLinkName == 'wechat'}"></div>
 			<div class="footer-title">北京羽衣科技有限公司</div>
 			<ul class="footer-info">
 				<li class="address">地址：北京市朝阳区阜通大街 1 号院 6 号楼</li>
