@@ -24,8 +24,7 @@ export default {
 
 .spec-banner {
     width: 100%;
-    height: 603px;
-    border-bottom: 1px solid #e8e8e8;
+    height: 604px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -34,8 +33,8 @@ export default {
 }
 
 .spec-detail {
-    width: 1200px;
-    height: 2637px;
+    width: 100%;
+    height: 3271px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;

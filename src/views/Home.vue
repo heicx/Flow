@@ -1,7 +1,7 @@
 <template>
     <section class="home-wrap">
         <div class="banner-img-1">
-            <video muted="muted" src="http://static.tcka.cn/Flow-F.mp4" loop="loop" autoplay="autoplay"></video>
+            <video muted="muted" src="http://static.flowclub.com/Flow-F.mp4" loop="loop" autoplay="autoplay"></video>
             <div class="text-container">
                 <span class="text"></span>
             </div>
@@ -10,6 +10,10 @@
             <div class="img"></div>
             <div class="text-container">
                 <span class="text"></span>
+                <div class="banner-btn">
+                    <a class="btn-1" target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w4004-21283948660.2.4bb57afaMLmV8H&id=586143386583"></a>
+                    <a class="btn-2" target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w4004-21283948660.4.4bb57afaMLmV8H&id=586638905206"></a>
+                </div>
             </div>
         </div>
         <div class="introduce-container">
@@ -19,23 +23,23 @@
                     <ul>
                         <li class="video-1" @mouseover="mouseover('videoFlowA', $event)" @mouseout="mouseout('videoFlowA')">
                             <i class="video-poster-1"></i>
-                            <video muted="muted" id="videoFlowA" v-show="videoStatus == 'videoFlowA'" src="http://static.tcka.cn/Flow-A.mp4" loop="loop"></video>
+                            <video muted="muted" id="videoFlowA" v-show="videoStatus == 'videoFlowA'" src="http://static.flowclub.com/Flow-A.mp4" loop="loop"></video>
                         </li>
                         <li class="video-2" @mouseover="mouseover('videoFlowB')" @mouseout="mouseout('videoFlowB')">
                             <i class="video-poster-2"></i>
-                            <video muted="muted" id="videoFlowB" v-show="videoStatus == 'videoFlowB'" src="http://static.tcka.cn/Flow-B.mp4" loop="loop"></video>
+                            <video muted="muted" id="videoFlowB" v-show="videoStatus == 'videoFlowB'" src="http://static.flowclub.com/Flow-B.mp4" loop="loop"></video>
                         </li>
                         <li class="video-3" @mouseover="mouseover('videoFlowC')" @mouseout="mouseout('videoFlowC')">
                             <i class="video-poster-3"></i>
-                            <video muted="muted" id="videoFlowC" v-show="videoStatus == 'videoFlowC'" src="http://static.tcka.cn/Flow-C.mp4" loop="loop"></video>
+                            <video muted="muted" id="videoFlowC" v-show="videoStatus == 'videoFlowC'" src="http://static.flowclub.com/Flow-C.mp4" loop="loop"></video>
                         </li>
                         <li class="video-4" @mouseover="mouseover('videoFlowD')" @mouseout="mouseout('videoFlowD')">
                             <i class="video-poster-4"></i>
-                            <video muted="muted" id="videoFlowD" v-show="videoStatus == 'videoFlowD'" src="http://static.tcka.cn/Flow-D.mp4" loop="loop"></video>
+                            <video muted="muted" id="videoFlowD" v-show="videoStatus == 'videoFlowD'" src="http://static.flowclub.com/Flow-D.mp4" loop="loop"></video>
                         </li>
                         <li class="video-5" @mouseover="mouseover('videoFlowE')" @mouseout="mouseout('videoFlowE')">
                             <i class="video-poster-5"></i>
-                            <video muted="muted" id="videoFlowE" v-show="videoStatus == 'videoFlowE'" src="http://static.tcka.cn/Flow-E.mp4" loop="loop"></video>
+                            <video muted="muted" id="videoFlowE" v-show="videoStatus == 'videoFlowE'" src="http://static.flowclub.com/Flow-E.mp4" loop="loop"></video>
                         </li>
                     </ul>
                 </transition>
@@ -109,9 +113,11 @@ export default {
 }
 
 .banner-img-1 {
-    height: 795px;
+    height: 788px;
+    overflow: hidden;
     video {
         position: absolute;
+        height: 1080px;
         left: 0;
         right: 0;
         top: 0;
@@ -138,32 +144,58 @@ export default {
     }
 }
 
+@media screen and (min-width: 1601px){
+  .banner-img-1 {
+    height: 1080px;
+  }
+}
+
+
 .banner-img-2 {
-    height: 1160px;
-    border-bottom: 1px solid #dcdcdc;
+    height: 1163px;
     .img {
         position: absolute;
+        height: 1184px;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         z-index: -1;
         background-repeat: no-repeat;
-        background-position: top;
+        background-position: center;
         background-size: cover;
         background-color: #fff;
         background-image: url(~images/home-banner2.png);
         background-image: -webkit-image-set(url(~images/home-banner2.png) 1x,url(~images/home-banner2@2x.png) 2x);
     }
     .text-container {
+        position: relative;
         width: 1200px;
         margin: 0 auto;
         padding-top: 314px;
+        .banner-btn {
+            position: absolute;
+            content: "";
+            bottom: 22px;
+            height: 52px;
+            left: 16px;
+        }
+        .btn-1 {
+            width: 152px;
+            height: 100%;
+            display: inline-block;
+        }
+        .btn-2 {
+            margin-left: 24px;
+            width: 152px;
+            height: 100%;
+            display: inline-block;
+        }
     }
     .text {
         display: block;
-        width: 573px;
-        height: 442px;
+        width: 589px;
+        height: 476px;
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
@@ -194,6 +226,7 @@ export default {
         background-image: -webkit-image-set(url(~images/slogan.png) 1x,url(~images/slogan@2x.png) 2x);
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: center;
     }
     .video-1 {
         width: 1300px;

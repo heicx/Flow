@@ -58,7 +58,7 @@ export default {
 }
 .tech-img-4 {
     width: 100%;
-    height: 1439px;
+    height: 1440px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

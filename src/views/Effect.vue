@@ -26,9 +26,9 @@ export default {
 
 .effect-banner {
     width: 100%;
-    height: 588px;
-    background-image: url(~images/health-banner.png);
-    background-image: -webkit-image-set(url(~images/health-banner.png) 1x,url(~images/health-banner@2x.png) 2x);
+    height: 589px;
+    background-image: url(~images/health-banner.jpg);
+    background-image: -webkit-image-set(url(~images/health-banner.jpg) 1x,url(~images/health-banner@2x.jpg) 2x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,7 +36,7 @@ export default {
 
 .effect-img-1 {
     width: 100%;
-    height: 849px;
+    height: 851px;
     background-image: url(~images/health-img-2.jpg);
     background-image: -webkit-image-set(url(~images/health-img-2.jpg) 1x,url(~images/health-img-2@2x.jpg) 2x);
     background-repeat: no-repeat;
