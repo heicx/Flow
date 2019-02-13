@@ -29,10 +29,6 @@ export default {
     Bus.$on('showNav', (status)=> {
       this.isHide = !status;
     });
-
-    // Bus.$on('navHideBtnEvent', (status)=> {
-    //   this.navHide = status;
-    // });
   },
   components: {
       appHeader,
