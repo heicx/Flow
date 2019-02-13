@@ -14,7 +14,7 @@ const htmlWebpack = new htmlWebpackPlugin({
 });
 
 // var publicPath = "/dist/";
-var publicPath = "//static.tcka.cn/resources/";
+var publicPath = "//static.flowclub.com/resources/";
 
 module.exports = {
   entry: {
