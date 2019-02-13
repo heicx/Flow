@@ -2,7 +2,9 @@
   <div id="app" class="app-wrap">
 		<app-header></app-header>
     <app-navigation :isHide='isHide'></app-navigation>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
 		<app-footer></app-footer>
 	</div>
 </template>
