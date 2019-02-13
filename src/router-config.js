@@ -72,26 +72,6 @@ router.beforeEach((to, from, next)=> {
         Bus.$emit('showNav', false);
     }
 
-    // if(['checkout', 'payment', 'account'].indexOf(to.name) > -1) {
-    //     Bus.$emit('navHideBtnEvent', true);
-    // }else {
-    //     Bus.$emit('navHideBtnEvent', false);
-    // }
-    
-    // if(to.name && ['passport'].indexOf(to.name) > -1) {
-    //     if(sessionStorage.getItem('_usr')) {
-    //         next('/');
-    //         return;
-    //     }
-    // }
-
-    // if(to.name && ['account', 'checkout', 'payment'].indexOf(to.name) > -1) {
-    //     if(!sessionStorage.getItem('_usr')) {
-    //         next('/');
-    //         return;
-    //     }
-    // }
-
     Util.title(to.meta.title);
 
     next();
