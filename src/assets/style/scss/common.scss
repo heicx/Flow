@@ -95,12 +95,14 @@ body {
 		float: right;
 		color: #1a1a1a;
 		font-size: $fontSize18;
+		text-align: center;
 		font-weight: bold;
 		background: #e6b52e;
 		width: 130px;
 		height: 60px;
-		line-height: 1;
+		line-height: 60px;
 		border: 1px solid #e6b52e;
+		box-sizing: border-box;
 		transition: all .15s ease-out;
 		&:hover {
 			background: #e6b52e;
@@ -120,27 +122,83 @@ body {
 }
 
 .footer .container {
+	position: relative;
 	width: 1200px;
-	padding: 70px 0 105px;
+	padding: 98px 0 140px;
 	margin: 0 auto;
 }
 
 .footer {
 	text-align: center;
+	.footer-share {
+		margin-bottom: 45px;
+	}
+	.share-icons {
+		display: inline-block;
+		&.wechat {
+			width: 39px;
+			height: 33px;
+			margin-right: 50px;
+			background-position: center;
+			background-size: cover;
+			background-image: url(~images/wechat_unfocus.png);
+			background-image: -webkit-image-set(url(~images/wechat_unfocus.png) 1x,url(~images/wechat_unfocus@2x.png) 2x);
+			&.active {
+				background-image: url(~images/wechat_focus.png);
+				background-image: -webkit-image-set(url(~images/wechat_focus.png) 1x,url(~images/wechat_focus@2x.png) 2x);
+			}
+		}
+		&.weibo {
+			width: 40px;
+			height: 37px;
+			background-position: center;
+			background-size: cover;
+			background-image: url(~images/weibo_unfocus.png);
+			background-image: -webkit-image-set(url(~images/weibo_unfocus.png) 1x,url(~images/weibo_unfocus@2x.png) 2x);
+			&.active {
+				background-image: url(~images/weibo_focus.png);
+				background-image: -webkit-image-set(url(~images/weibo_focus.png) 1x,url(~images/weibo_focus@2x.png) 2x);
+			}
+		}
+	}
+	.footer-qrcode {
+		position: absolute;
+		width: 317px;
+		height: 305px;
+		top: 10px;
+		right: 0;
+		left: -450px;
+		margin: 0 auto;
+		z-index: 15;
+		background-position: center;
+		background-size: cover;
+		background-image: url(~images/qr-code.png);
+		background-image: -webkit-image-set(url(~images/qr-code.png) 1x,url(~images/qr-code@2x.png) 2x);
+	}
 	.footer-title {
 		color: #575757;
-		font-size: $fontSize16;
+		font-size: 17px;
 		line-height: 1;
-		margin-bottom: $fontSize16;
+		margin-bottom: 20px;
 	}
 	.footer-info {
 		line-height: 1;
-		margin-bottom: 14px;
+		margin-bottom: 20px;
+		font-size: 0;
 		li {
+			position: relative;
 			display: inline-block;
 			font-size: 15px;
 			color: #575757;
-			margin-right: 27px;
+			margin-right: 30px;
+			&:after {
+				position: absolute;
+				content: "";
+				width: 1px;
+				height: 15px;
+				background: #292929;
+				right: -15px;
+			}
 			a {
 				color: #575757;
 			}
@@ -149,27 +207,40 @@ body {
 			}
 			&:last-child {
 				margin-right: 0;
+				&:after {
+					content: none;
+				}
 			}
 		}
 	}
 	.copyright {
 		clear: both;
-		font-size: 12px;
-		.company {
-			margin-bottom: 8px;
-		}
-		.company,
-		.record {
+		font-size: 0;
+		li {
+			position: relative;
+			display: inline-block;
+			line-height: 1;
+			font-size: 12px;
 			color: #393939;
-		}
-		.record {
-			a {
-				color: #393939;
-				&:last-child {
-					margin-right: 0;
-				}
-				margin-right: 20px;
+			margin-right: 30px;
+			&:after {
+				position: absolute;
+				content: "";
+				width: 2px;
+				height: 2px;
+				border-radius: 50%;
+				background: #393939;
+				top: 5px;
+				right: -15px;
 			}
+		}
+		li:last-child {
+			&:after {
+				content: none;
+			}
+		}
+		a {
+			color: #393939;
 		}
 	}
 }
