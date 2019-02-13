@@ -169,11 +169,16 @@ body {
 		right: 0;
 		left: -450px;
 		margin: 0 auto;
+		opacity: 0;
+		transition: all .15s ease-out;
 		z-index: 15;
 		background-position: center;
 		background-size: cover;
 		background-image: url(~images/qr-code.png);
 		background-image: -webkit-image-set(url(~images/qr-code.png) 1x,url(~images/qr-code@2x.png) 2x);
+		&.footer-qrcode-anim {
+			opacity: 1;
+		}
 	}
 	.footer-title {
 		color: #575757;
