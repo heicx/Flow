@@ -1,12 +1,13 @@
 <template>
 	<div class="footer">
 		<div class="container clearfix">
-			<!-- <ul class="footer-share">
-				<li class="share-icons wechat">
-				</li>
-				<li class="share-icons weibo">
-				</li>
-			</ul> -->
+			<div class="footer-share">
+				<a class="share-icons wechat" :class="{ active: shareLinkName == 'wechat'}" @mouseover="mouseover('wechat', $event)" @mouseout="mouseout('wechat')">
+				</a>
+				<a class="share-icons weibo" :class="{ active: shareLinkName == 'weibo'}" @mouseover="mouseover('weibo', $event)" @mouseout="mouseout('weibo')" target="_blank" href="https://weibo.com/u/6875249519">
+				</a>
+			</div>
+			<div class="footer-qrcode" v-show="shareLinkName == 'wechat'"></div>
 			<div class="footer-title">北京羽衣科技有限公司</div>
 			<ul class="footer-info">
 				<li class="address">地址：北京市朝阳区阜通大街 1 号院 6 号楼</li>
@@ -15,14 +16,31 @@
 				</li>
 				<li class="tel">客服电话：400-086-3666</li>
 			</ul>
-			<div class="copyright">
-				<h3 class="company">Copyright © 2019, Beijing Yuyi Technology Co., Ltd. All Rights Reserved.</h3>
-				<h3 class="record">
+			<ul class="copyright">
+				<li class="company">Copyright © 2019, Beijing Yuyi Technology Co., Ltd. All Rights Reserved.</li>
+				<li class="record">
 					<a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 备 19005651 号 - 1</a>
-					<!-- <a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 备 15108072 号 - 1</a> -->
-				</h3>
-			</div>
+				</li>
+			</ul>
 		</div>
 		
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+        return {
+            shareLinkName: ""
+        }
+    },
+    methods: {
+        mouseover(name, event) {
+            this.shareLinkName = name;
+        },
+        mouseout(name) {
+            this.shareLinkName = '';
+        }
+    }
+}
+</script>

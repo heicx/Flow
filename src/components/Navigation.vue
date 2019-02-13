@@ -6,7 +6,7 @@
           <router-link :to='item.link'>{{item.name}}</router-link>
         </li>
       </ul>
-      <button class="nav-btn" @click="openDialog()">现在购买</button>
+      <a class="nav-btn" href="/#/shop">现在购买</a>
     </div>
 	</div>
 </template>
@@ -17,7 +17,6 @@ export default {
   props: ['isHide'],
   data() {
     return {
-      isOpenDialog: false,
       list: [
         {
           name: '核心技术',
@@ -35,13 +34,6 @@ export default {
   created () {
   },
   methods: {
-    closeDialog (status) {
-      this.isOpenDialog = status;
-    },
-    openDialog () {
-      this.isOpenDialog = true;
-      // window.location.href = 'https://z.jd.com/project/details/102089.html?from=jr_search&type=0';
-    },
     checkoutOrder (arrGoods) {
       let oOrder = {};
       let orderId = (new Date()).getTime();
