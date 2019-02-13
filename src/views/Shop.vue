@@ -6,7 +6,7 @@
                     <a class="btn-1" target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w4004-21283948660.2.4bb57afaMLmV8H&id=586143386583"></a>
                     <a class="btn-2" @click="showQRCode('qrCode1', $event)"></a>
                 </div>
-                <div class="qr-code" v-if="qrcodeName == 'qrCode1'"></div>
+                <div class="qr-code" :class="{'qr-code-anim': qrcodeName == 'qrCode1'}"></div>
             </div>
         </div>
         <div class="shop-specs" :class="color">
@@ -15,12 +15,12 @@
             <a class="white-btn" @click="changeColor('white')"></a>
             <a class="taobao-btn" target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w4004-21283948660.2.4bb57afaMLmV8H&id=586143386583"></a>
             <a class="mini-program-btn" @click="showQRCode('qrCode2', $event)"></a>
-            <div class="qr-code" v-if="qrcodeName == 'qrCode2'"></div>
+            <div class="qr-code" :class="{'qr-code-anim': qrcodeName == 'qrCode2'}"></div>
         </div>
         <div class="shop-colors">
             <a class="taobao-btn" target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w4004-21283948660.2.4bb57afaMLmV8H&id=586143386583"></a>
             <a class="mini-program-btn" @click="showQRCode('qrCode3', $event)"></a>
-            <div class="qr-code" v-if="qrcodeName == 'qrCode3'"></div>
+            <div class="qr-code" :class="{'qr-code-anim': qrcodeName == 'qrCode3'}"></div>
         </div>
     </div>
 </template>
@@ -107,14 +107,19 @@ export default {
         position: absolute;
         width: 280px;
         height: 280px;
+        transition: all .15s ease-out;
+        opacity: 0;
         border-radius: 16px;
         border: 1px solid #e8e5e5;
-        top: 260px;
+        top: 300px;
         left: 380px;
         z-index: 5;
         background-size: cover;
         background-image: url(~images/mini-program.jpg);
         background-image: -webkit-image-set(url(~images/mini-program.jpg) 1x,url(~images/mini-program@2x.jpg) 2x);
+        &.qr-code-anim {
+            opacity: 1;
+        }
     }
 }
 
@@ -186,6 +191,8 @@ export default {
         position: absolute;
         width: 280px;
         height: 280px;
+        transition: all .15s ease-out;
+        opacity: 0;
         border-radius: 16px;
         border: 1px solid #e8e5e5;
         top: 426px;
@@ -194,6 +201,9 @@ export default {
         background-size: cover;
         background-image: url(~images/mini-program.jpg);
         background-image: -webkit-image-set(url(~images/mini-program.jpg) 1x,url(~images/mini-program@2x.jpg) 2x);
+        &.qr-code-anim {
+            opacity: 1;
+        }
     }
 }
 
@@ -231,14 +241,19 @@ export default {
         position: absolute;
         width: 280px;
         height: 280px;
+        transition: all .15s ease-out;
+        opacity: 0;
         border-radius: 16px;
         border: 1px solid #e8e5e5;
-        top: 0;
-        right: 170px;
+        top: 170px;
+        right: 406px;
         z-index: 5;
         background-size: cover;
         background-image: url(~images/mini-program.jpg);
         background-image: -webkit-image-set(url(~images/mini-program.jpg) 1x,url(~images/mini-program@2x.jpg) 2x);
+        &.qr-code-anim {
+            opacity: 1;
+        }
     }
 }
 </style>
