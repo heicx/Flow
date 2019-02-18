@@ -1,15 +1,13 @@
 import VueRouter from 'vue-router'
 import Bus from './bus';
+import Util from './libs/util';
 
 import Home from './views/Home.vue'
 import Spec from './views/Spec.vue'
 import Tech from './views/Tech.vue'
 import Effect from './views/Effect.vue'
 import Shop from './views/Shop.vue'
-
 import NotFound from './views/NotFound.vue'
-
-import Util from './libs/util';
 
 let router = new VueRouter({
     // mode: 'history',
