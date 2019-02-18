@@ -68,7 +68,7 @@ export default {
 
 .shop-banner-container {
     width: 100%;
-    height: 648px;
+    height: 598px;
     background-image: url(~images/shop-box-banner.jpg);
     background-image: -webkit-image-set(url(~images/shop-box-banner.jpg) 1x,url(~images/shop-box-banner@2x.jpg) 2x);
     background-repeat: no-repeat;

@@ -121,8 +121,8 @@ export default {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    background-image: url(~images/home-banner.jpg);
-    background-image: -webkit-image-set(url(~images/home-banner.jpg) 1x,url(~images/home-banner@2x.jpg) 2x);
+    background-image: url(~images/home-banner.jpg?imageMogr2/format/webp/blur/1x0/quality/95);
+    background-image: -webkit-image-set(url(~images/home-banner.jpg?imageMogr2/format/webp/blur/1x0/quality/95) 1x,url(~images/home-banner@2x.jpg?imageMogr2/format/webp/blur/1x0/quality/95) 2x);
     /** 首屏 Banner 替换 Video **/
     video {
         position: absolute;
@@ -152,13 +152,6 @@ export default {
         background-image: -webkit-image-set(url(~images/home-banner-text.png) 1x,url(~images/home-banner-text@2x.png) 2x);
     }
 }
-
-@media screen and (min-width: 1601px){
-  .banner-img-1 {
-    height: 1080px;
-  }
-}
-
 
 .banner-img-2 {
     height: 1163px;
@@ -202,7 +195,8 @@ export default {
         }
     }
     .text {
-        display: block;
+        position: absolute;
+        left: 0;
         width: 589px;
         height: 476px;
         background-repeat: no-repeat;
@@ -454,6 +448,135 @@ export default {
         display: block;
         width: 204px;
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 1414px) {
+    .banner-img-1 {
+        height: 615px;
+    }
+    .banner-img-2 {
+        height: 885px;
+        .img {
+            height: 900px;
+        }
+        .text-container {
+            padding-top: 238px;
+            .text {
+                width: 446px;
+                height: 361px;
+                left: 90px;
+            }
+            .banner-btn {
+                bottom: -343px;
+                height: 39px;
+                left: 102px;
+            }
+            .btn-1 {
+                width: 114px;
+            }
+            .btn-2 {
+                margin-left: 18px;
+                width: 116px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1415px) and (max-width: 1600px) {
+    .banner-img-1 {
+        height: 650px;
+    }
+    .banner-img-2 {
+        height: 885px;
+        .img {
+            height: 980px;
+        }
+        .text-container {
+            padding-top: 256px;
+            .text {
+                width: 487px;
+                height: 393px;
+                left: 70px;
+            }
+            .banner-btn {
+                bottom: -374px;
+                height: 43px;
+                left: 84px;
+            }
+            .btn-1 {
+                width: 124px;
+            }
+            .btn-2 {
+                margin-left: 18px;
+                width: 128px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1601px) and (max-width: 1919px){
+    .banner-img-1 {
+        height: 830px;
+    }
+    .banner-img-2 {
+        height: 806px;
+        .img {
+            height: 820px;
+        }
+        .text-container {
+            padding-top: 198px;
+            .text {
+                width: 491px;
+                height: 397px;
+                left: 50px;
+            }
+            .banner-btn {
+                bottom: -378px;
+                height: 44px;
+                left: 64px;
+            }
+            .btn-1 {
+                width: 126px;
+            }
+            .btn-2 {
+                margin-left: 18px;
+                width: 128px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .banner-img-1 {
+        height: 850px;
+    }
+    .banner-img-2 {
+        height: 963px;
+        .img {
+            height: 980px;
+        }
+        .text-container {
+            padding-top: 260px;
+            .text {
+                width: 487px;
+                height: 393px;
+                left: 50px;
+            }
+            .banner-btn {
+                bottom: -376px;
+                height: 44px;
+                left: 64px;
+            }
+            .btn-1 {
+                width: 126px;
+            }
+            .btn-2 {
+                margin-left: 18px;
+                width: 128px;
+            }
+        }
     }
 }
 

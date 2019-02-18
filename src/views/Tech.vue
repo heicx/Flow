@@ -31,7 +31,7 @@ export default {
 
 .tech-img-1 {
     width: 100%;
-    height: 1220px;
+    height: 1020px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -40,7 +40,7 @@ export default {
 }
 .tech-img-2 {
     width: 100%;
-    height: 1440px;
+    height: 1140px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -49,7 +49,7 @@ export default {
 }
 .tech-img-3 {
     width: 100%;
-    height: 721px;
+    height: 550px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -58,7 +58,7 @@ export default {
 }
 .tech-img-4 {
     width: 100%;
-    height: 1440px;
+    height: 1140px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,7 +67,7 @@ export default {
 }
 .tech-img-5 {
     width: 100%;
-    height: 721px;
+    height: 550px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -76,7 +76,7 @@ export default {
 }
 .tech-img-6 {
     width: 100%;
-    height: 1248px;
+    height: 1148px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -85,7 +85,7 @@ export default {
 }
 .tech-img-7 {
     width: 100%;
-    height: 1154px;
+    height: 954px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -94,7 +94,7 @@ export default {
 }
 .tech-img-8 {
     width: 100%;
-    height: 2233px;
+    height: 1833px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -103,11 +103,26 @@ export default {
 }
 .tech-img-9 {
     width: 100%;
-    height: 721px;
+    height: 650px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url(~images/tech-img-9.jpg);
     background-image: -webkit-image-set(url(~images/tech-img-9.jpg) 1x,url(~images/tech-img-9@2x.jpg) 2x);
+}
+
+// @media screen and (max-width: 1414px) {
+//     .tech-img-1 {
+//         height: 642px;
+//     }
+// }
+
+@media screen and (max-width: 1600px) {
+    .tech-img-1 {
+        height: 780px;
+    }
+    .tech-img-2 {
+        height: 960px;
+    }
 }
 </style>
