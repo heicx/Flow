@@ -52,7 +52,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+            name: '[hash].[ext]?imageMogr2/format/webp/blur/1x0/quality/95'
         }
       },
       {
