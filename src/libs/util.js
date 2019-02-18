@@ -5,4 +5,9 @@ util.title = function (title) {
     window.document.title = title;
 };
 
+util.isMobile = function () {
+    let ua = navigator.userAgent;
+    return !!ua.match(/Android/i) || !!ua.match(/iPhone|iPad|iPod/i);
+}
+
 export default util;
