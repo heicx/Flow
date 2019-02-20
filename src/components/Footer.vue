@@ -17,13 +17,15 @@
 				<li class="tel">客服电话：400-086-3666</li>
 			</ul>
 			<ul class="copyright">
-				<li class="company">Copyright © 2019, Beijing Yuyi Technology Co., Ltd. All Rights Reserved.</li>
-				<li class="record">
+				<li>Copyright © 2019, Beijing Yuyi Technology Co., Ltd. All Rights Reserved.</li>
+				<li>
 					<a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 备 19005651 号 - 1</a>
+				</li>
+				<li>
+					<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502037227" target="_blank">京公网安备 11010502037227 号</a>
 				</li>
 			</ul>
 		</div>
-		
 	</div>
 </template>
 
