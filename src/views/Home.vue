@@ -434,7 +434,7 @@ export default {
     .hotlink {
         position: absolute;
         z-index: 10;
-        left: 176px;
+        left: 106px;
         bottom: 16px;
         display: block;
         width: 170px;
