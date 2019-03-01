@@ -53,6 +53,14 @@
             </div>
         </div>
         <div class="prohibit"></div>
+        <div class="confirm-tips" v-if="isShowTips">
+            <div class="confirm-text"></div>
+            <div class="confirm-btn">
+                <a class="btn-ok" @click="tipsConfirm(true)"></a>
+                <a class="btn-no" @click="tipsConfirm()"></a>
+            </div>
+        </div>
+        <div class="mask" v-if="isShowTips"></div>
     </section>
 </template>
 
@@ -62,6 +70,7 @@ import { setTimeout } from 'timers';
 export default {
     data() {
         return {
+            isShowTips: !localStorage.getItem('_tips'),
             videoStatus: ""
         }
     },
@@ -82,6 +91,22 @@ export default {
             
             this.videoStatus = '';
             video.pause();
+        },
+        tipsConfirm(status) {
+            if (!!status) {
+                this.isShowTips = false;
+                localStorage.setItem('_tips', true);
+            } else if (navigator.userAgent.indexOf("MSIE") > 0) {
+                window.opener = null;
+                window.close();
+            } else if (navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Chrome") != -1) {
+                window.location.href = 'about:blank';
+                window.close();
+            } else {
+                window.opener = null;
+                window.open('', '_self', '');
+                window.close();
+            }
         }
     },
     computed: {
@@ -399,6 +424,71 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.confirm-tips {
+    position: fixed;
+    width: 1000px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 35;
+    .confirm-btn {
+        position: absolute;
+        width: 603px;
+        height: 80px;
+        left: 50%;
+        bottom: 114px;
+        transform: translateX(-50%);
+        font-size: 0;
+        background-image: url(~images/modal-btn.png);
+        background-image: -webkit-image-set(url(~images/modal-btn.png) 1x,url(~images/modal-btn@2x.png) 2x);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .btn-ok {
+        width: 290px;
+        height: 80px;
+        display: inline-block;
+    }
+    .btn-no {
+        width: 290px;
+        height: 80px;
+        display: inline-block;
+        margin-left: 23px;
+    }
+    .confirm-text {
+        position: absolute;
+        width: 531px;
+        height: 67px;
+        left: 50%;
+        bottom: 263px;
+        transform: translateX(-50%);
+        background-image: url(~images/modal-text@2x.png);
+        background-image: -webkit-image-set(url(~images/modal-text@2x.png) 1x,url(~images/modal-text@2x.png) 2x);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgb(0, 0, 0);  
+    filter: alpha(opacity=60);  
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 30;
 }
 
 .footer-menu {
